@@ -12,5 +12,9 @@ public class RestApplication extends ResourceConfig {
         register(com.wordnik.swagger.jersey.listing.JerseyApiDeclarationProvider.class);
         register(com.wordnik.swagger.jersey.listing.JerseyResourceListingProvider.class);*/
 
+        packages("io.swagger.jaxrs.listing",
+                "io.swagger.sample.resource",
+                "io.swagger.api");
+
     }
 }
