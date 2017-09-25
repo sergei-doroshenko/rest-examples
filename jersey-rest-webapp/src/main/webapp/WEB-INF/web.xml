@@ -66,6 +66,11 @@
         <servlet-name>SwaggerUI</servlet-name>
         <url-pattern>/webapi/docs</url-pattern>
     </servlet-mapping>
+    <!-- Need to serve static content -->
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.html</url-pattern>
+    </servlet-mapping>
 
     <!-- CORS Filter -->
     <filter>
