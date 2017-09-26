@@ -34,7 +34,8 @@ public class SwaggerUIServlet extends HttpServlet {
     private void forward(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String path = req.getRequestURI().substring(req.getServletPath().length() - "docs".length());
         if ("docs".equals(path)) {
-            path = "docs" + "/index.html";
+//            path = "docs" + "/index.html";
+            path = "swagger-ui" + "/index.html";
         }
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/" + path);
         dispatcher.forward(req, resp);

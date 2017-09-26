@@ -1,6 +1,6 @@
 package org.sergei.rest.swagger;
 
-import io.swagger.config.ConfigFactory;
+//import io.swagger.config.ConfigFactory;
 
 import javax.servlet.http.HttpServlet;
 

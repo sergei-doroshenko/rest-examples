@@ -16,5 +16,7 @@ public class RestApplication extends ResourceConfig {
                 "io.swagger.sample.resource",
                 "io.swagger.api");
 
+        /*packages("com.wordnik.swagger.jersey.listing");*/
+
     }
 }
