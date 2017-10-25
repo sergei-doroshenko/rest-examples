@@ -9,7 +9,7 @@ public class LazyDataProviderTest {
 
     @DataProvider
     private final Iterator<Object[]> getLazyData() {
-        return new Iterator<>() {
+        return new Iterator<Object[]>() {
             private int counter = 1;
 
             @Override

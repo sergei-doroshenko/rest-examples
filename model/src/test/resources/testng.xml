@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Component Tests" verbose="2" annotations="JDK">
+    <test name="a-t1">
+        <!--<classes>
+            <class name="org.sergei.ClientTest" />
+            <class name="org.sergei.LazyDataProviderTest" />
+        </classes>-->
+        <packages>
+            <package name="org.sergei"/>
+        </packages>
+    </test>
+</suite>
