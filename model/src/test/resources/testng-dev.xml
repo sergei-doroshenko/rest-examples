@@ -1,12 +1,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Component Tests">
+<suite name="Component Tests" parallel="classes" thread-count="${thread.count}">
     <test name="a-t1">
-        <!--<classes>
+        <classes>
             <class name="org.sergei.ClientTest" />
             <class name="org.sergei.LazyDataProviderTest" />
-        </classes>-->
-        <packages>
-            <package name="org.sergei"/>
-        </packages>
+        </classes>
     </test>
 </suite>
