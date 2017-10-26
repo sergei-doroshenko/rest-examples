@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Component Tests" parallel="classes" thread-count="6">
+<suite name="Component Tests">
     <test name="a-t1">
         <!--<classes>
             <class name="org.sergei.ClientTest" />
