@@ -11,5 +11,12 @@
 
     <artifactId>swagger-ui-new</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>swagger-ui</artifactId>
+            <version>3.13.4</version>
+        </dependency>
+    </dependencies>
 
 </project>

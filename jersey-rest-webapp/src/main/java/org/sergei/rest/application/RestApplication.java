@@ -1,6 +1,7 @@
 package org.sergei.rest.application;
 
-import com.wordnik.swagger.jaxrs.config.BeanConfig;
+//import com.wordnik.swagger.jaxrs.config.BeanConfig;
+//import io.swagger.jaxrs.config.BeanConfig;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.sergei.rest.MyResource;
 
@@ -13,19 +14,19 @@ public class RestApplication extends ResourceConfig {
         register(com.wordnik.swagger.jersey.listing.JerseyApiDeclarationProvider.class);
         register(com.wordnik.swagger.jersey.listing.JerseyResourceListingProvider.class);*/
 
-        /*packages("io.swagger.jaxrs.listing",
+        packages("io.swagger.jaxrs.listing",
                 "io.swagger.sample.resource",
-                "io.swagger.api");*/
+                "io.swagger.api");
 
-        packages("com.wordnik.swagger.jersey.listing");
+//        packages("com.wordnik.swagger.jersey.listing");
 
-        BeanConfig beanConfig = new BeanConfig();
-        beanConfig.setTitle("My test application");
-        beanConfig.setVersion("1.0.2");
-        beanConfig.setBasePath("http://localhost:8081/webapi");
+//        BeanConfig beanConfig = new BeanConfig();
+//        beanConfig.setTitle("My test application");
+//        beanConfig.setVersion("1.0.2");
+//        beanConfig.setBasePath("http://localhost:8081/webapi");
 //        beanConfig.setBasePath("webapi");
-        beanConfig.setResourcePackage("org.sergei.rest");
-        beanConfig.setScan(true);
+//        beanConfig.setResourcePackage("org.sergei.rest");
+//        beanConfig.setScan(true);
 
 
     }
