@@ -11,9 +11,8 @@
     <modules>
         <module>jersey-rest-webapp</module>
         <module>swagger-ui-new</module>
-        <module>swagger-ui-2</module>
-        <module>swagger-ui-old</module>
         <module>model</module>
+        <module>services</module>
     </modules>
 
     <properties>
@@ -21,6 +20,7 @@
         <java.version>11</java.version>
         <servlet-api-version>3.0-alpha-1</servlet-api-version>
         <jersey.version>2.29</jersey.version>
+        <spring.version>4.1.6.RELEASE</spring.version>
         <swagger-core-version>1.5.23</swagger-core-version>
     </properties>
 
@@ -30,6 +30,13 @@
                 <groupId>org.glassfish.jersey</groupId>
                 <artifactId>jersey-bom</artifactId>
                 <version>${jersey.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-framework-bom</artifactId>
+                <version>${spring.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -63,6 +70,11 @@
                 <artifactId>swagger-jersey2-jaxrs</artifactId>
                 <scope>compile</scope>
                 <version>${swagger-core-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+                <version>1.2</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -4,6 +4,8 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import org.sergei.service.MessageService;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -15,18 +17,16 @@ import static org.sergei.rest.RestConstants.INCORRECT_PARAMS;
 import static org.sergei.rest.RestConstants.INTERNAL_SERVER_ERROR;
 import static org.sergei.rest.RestConstants.SUCCESSFUL_REQUEST;
 
-/*import com.wordnik.swagger.annotations.Api;
-import com.wordnik.swagger.annotations.ApiOperation;
-import com.wordnik.swagger.annotations.ApiResponse;
-import com.wordnik.swagger.annotations.ApiResponses;*/
-
 /**
- * Root resource (exposed at "myresource" path)
- * http://localhost:8081/webapi/myresource
+ * Root resource (exposed at "messages" path)
+ * http://localhost:8081/webapi/messages
  */
-@Path("myresource")
-@Api(value = "TesResource")
-public class MyResource {
+@Path("messages")
+@Api(value = "Message Resource")
+public class MessageResource {
+
+    @Autowired
+    private MessageService messageService;
 
     /**
      * Method handling HTTP GET requests. The returned object will be sent
@@ -35,7 +35,7 @@ public class MyResource {
      * @return String that will be returned as a text/plain response.
      */
     @GET
-    @ApiOperation(value = "Return test messge", httpMethod = "GET", response = Response.class)
+    @ApiOperation(value = "Return json message", httpMethod = "GET", response = Response.class)
     @ApiResponses(value = {
         @ApiResponse(code = 200, message = SUCCESSFUL_REQUEST),
         @ApiResponse(code = 400, message = INCORRECT_PARAMS),
@@ -43,6 +43,7 @@ public class MyResource {
     })
     @Produces(MediaType.APPLICATION_JSON)
     public Response getIt() {
-        return Response.ok("{\"message\":\"Got it!\"}").build();
+        String json = messageService.getMessage();
+        return Response.ok(json).build();
     }
 }
