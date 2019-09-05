@@ -4,19 +4,7 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff:
-jersey-rest-webapp/target/
-swagger-ui-2/src/main/resources/
-swagger-ui-2/src/test/
-swagger-ui-2/target/
-swagger-ui-new/src/main/java/
-swagger-ui-new/src/test/
-swagger-ui-new/target/
-swagger-ui-old/src/main/java/
-swagger-ui-old/src/test/
-swagger-ui-old/target/
-
-## File-based project format:
-*.iws
+*/target/
 
 # IntelliJ
 .idea
@@ -26,17 +14,8 @@ out/
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
-# JIRA plugin
-atlassian-ide-plugin.xml
-
 # Cursive Clojure plugin
 .idea/replstate.xml
-
-# Crashlytics plugin (for Android Studio and IntelliJ)
-com_crashlytics_export_strings.xml
-crashlytics.properties
-crashlytics-build.properties
-fabric.properties
 
 ### Java template
 # Compiled class file
@@ -55,3 +34,4 @@ fabric.properties
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+model/target/
