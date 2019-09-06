@@ -1,4 +1,4 @@
-package org.sergei;
+package org.sergei.model;
 
 public class ComplexObject {
     private final int value;

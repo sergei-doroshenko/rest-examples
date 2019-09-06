@@ -1,4 +1,4 @@
-package org.sergei;
+package org.sergei.model;
 
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;

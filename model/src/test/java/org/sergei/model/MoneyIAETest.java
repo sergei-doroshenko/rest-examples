@@ -1,4 +1,4 @@
-package org.sergei;
+package org.sergei.model;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;

@@ -2,8 +2,8 @@
 <suite name="Component Tests" parallel="classes" thread-count="${thread.count}">
     <test name="a-t1">
         <classes>
-            <class name="org.sergei.ClientTest" />
-            <class name="org.sergei.LazyDataProviderTest" />
+            <class name="org.sergei.model.ClientTest" />
+            <class name="org.sergei.model.LazyDataProviderTest" />
         </classes>
     </test>
 </suite>

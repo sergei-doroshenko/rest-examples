@@ -4,6 +4,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import org.sergei.model.Message;
 import org.sergei.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -12,6 +13,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+
+import java.util.List;
 
 import static org.sergei.rest.RestConstants.INCORRECT_PARAMS;
 import static org.sergei.rest.RestConstants.INTERNAL_SERVER_ERROR;
@@ -35,15 +38,15 @@ public class MessageResource {
      * @return String that will be returned as a text/plain response.
      */
     @GET
-    @ApiOperation(value = "Return json message", httpMethod = "GET", response = Response.class)
+    @ApiOperation(value = "Return json message", httpMethod = "GET", response = List.class)
     @ApiResponses(value = {
         @ApiResponse(code = 200, message = SUCCESSFUL_REQUEST),
         @ApiResponse(code = 400, message = INCORRECT_PARAMS),
         @ApiResponse(code = 500, message = INTERNAL_SERVER_ERROR)
     })
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getIt() {
-        String json = messageService.getMessage();
-        return Response.ok(json).build();
+    public List<Message> getMessage() {
+        List<Message> messages = messageService.getAllMessages();
+        return messages;
     }
 }

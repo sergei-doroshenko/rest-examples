@@ -1,4 +1,4 @@
-package org.sergei;
+package org.sergei.model;
 
 import java.util.ArrayList;
 import java.util.List;
