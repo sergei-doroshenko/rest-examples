@@ -7,6 +7,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -26,7 +29,9 @@ public class TraceRestAspect {
             List<Message> messages = (List<Message>) result;
             if (!messages.isEmpty()) {
                 Message first = messages.get(0);
-                first.setPayload(first.getPayload() + " [traced]");
+                Date now = Date.from(Instant.now());
+                SimpleDateFormat format = new SimpleDateFormat("dd-mm-yyyy hh:mm:ss");
+                first.setPayload(first.getPayload() + " [Traced at: " + format.format(now) + "]");
             }
             return messages;
         } catch (Exception e) {
