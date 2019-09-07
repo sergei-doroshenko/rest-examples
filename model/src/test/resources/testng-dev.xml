@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Component Tests" parallel="classes" thread-count="${thread.count}">
-    <test name="a-t1">
+<suite name="REST Examples Model classes In-Dev Tests" parallel="classes" thread-count="${thread.count}">
+    <test name="model classes unit tests">
         <classes>
             <class name="org.sergei.model.ClientTest" />
             <class name="org.sergei.model.LazyDataProviderTest" />
