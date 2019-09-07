@@ -1,1 +1,0 @@
-INSERT INTO messages VALUES (1, 'Hello from repo!');

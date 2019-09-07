@@ -8,7 +8,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jersey-rest-webapp</artifactId>
+    <artifactId>rest-examples-webapp</artifactId>
     <packaging>war</packaging>
     <name>REST Examples: Jersey REST Webapp</name>
 
@@ -73,7 +73,7 @@
 
         <dependency>
             <groupId>org.sdoroshenko</groupId>
-            <artifactId>services</artifactId>
+            <artifactId>rest-examples-service</artifactId>
             <version>${project.version}</version>
         </dependency>
 

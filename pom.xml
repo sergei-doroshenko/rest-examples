@@ -11,11 +11,11 @@
     <name>REST Examples: Parent</name>
 
     <modules>
-        <module>jersey-rest-webapp</module>
+        <module>rest-examples-model</module>
+        <module>rest-examples-persistence</module>
+        <module>rest-examples-service</module>
+        <module>rest-examples-webapp</module>
         <module>swagger-ui-new</module>
-        <module>model</module>
-        <module>services</module>
-        <module>persistence</module>
     </modules>
 
     <properties>

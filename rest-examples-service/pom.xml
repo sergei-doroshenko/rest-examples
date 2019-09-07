@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>services</artifactId>
+    <artifactId>rest-examples-service</artifactId>
     <name>REST Examples: Services</name>
 
     <dependencies>
@@ -19,7 +19,7 @@
         </dependency>
         <dependency>
             <groupId>org.sdoroshenko</groupId>
-            <artifactId>persistence</artifactId>
+            <artifactId>rest-examples-persistence</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
