@@ -2,8 +2,8 @@
 <suite name="REST Examples Model classes In-Dev Tests" parallel="classes" thread-count="${thread.count}">
     <test name="model classes unit tests">
         <classes>
-            <class name="org.sergei.model.ClientTest" />
-            <class name="org.sergei.model.LazyDataProviderTest" />
+            <class name="org.sdoroshenko.model.ClientTest" />
+            <class name="org.sdoroshenko.model.LazyDataProviderTest" />
         </classes>
     </test>
 </suite>

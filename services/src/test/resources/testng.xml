@@ -3,7 +3,7 @@
 <suite name="REST Examples Services Tests">
     <test name="services unit tests">
         <packages>
-            <package name="org.sergei.service"/>
+            <package name="org.sdoroshenko.service"/>
         </packages>
     </test>
 </suite>

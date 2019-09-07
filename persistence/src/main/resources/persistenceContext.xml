@@ -7,7 +7,7 @@
                            http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
                            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="org.sergei.persistence"/>
+    <context:component-scan base-package="org.sdoroshenko.persistence"/>
 
     <jdbc:embedded-database id="dataSource" type="H2">
         <jdbc:script location="classpath:db/sql/create-db.sql"/>
@@ -27,5 +27,5 @@
           p:mapperLocations="classpath*:mappers/*.xml"/>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"
-          p:basePackage="org.sergei.persistence"/>
+          p:basePackage="org.sdoroshenko.persistence"/>
 </beans>

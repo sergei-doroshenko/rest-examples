@@ -4,14 +4,14 @@ To create Jersey project from scratch, execute this commands:
 ```
 mvn archetype:generate -DarchetypeArtifactId=jersey-quickstart-grizzly2 \
 -DarchetypeGroupId=org.glassfish.jersey.archetypes -DinteractiveMode=false \
--DgroupId=org.sergei -DartifactId=simple-service -Dpackage=org.sergei.rest \
+-DgroupId=org.sdoroshenko -DartifactId=simple-service -Dpackage=org.sdoroshenko.rest \
 -DarchetypeVersion=2.21.1
 ```
 * for webapp project
 ```
 mvn archetype:generate -DarchetypeArtifactId=jersey-quickstart-webapp \
 -DarchetypeGroupId=org.glassfish.jersey.archetypes -DinteractiveMode=false \
--DgroupId=org.sergei -DartifactId=simple-service-webapp -Dpackage=org.sergei.rest \
+-DgroupId=org.sdoroshenko -DartifactId=simple-service-webapp -Dpackage=org.sdoroshenko.rest \
 -DarchetypeVersion=2.21.1
 ```
 ####Run a project

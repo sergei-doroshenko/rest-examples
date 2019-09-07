@@ -7,12 +7,12 @@
                            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <import resource="classpath:serviceContext.xml"/>
-    <context:component-scan base-package="org.sergei.rest"/>
+    <context:component-scan base-package="org.sdoroshenko.rest"/>
 
     <aop:config>
         <aop:aspect id="traceAspect" ref="traceRestAspect">
             <aop:pointcut id="pointCutTrace"
-                          expression="execution(@(javax.ws.rs.GET) * org.sergei.rest.MessageResource.*(..))"/>
+                          expression="execution(@(javax.ws.rs.GET) * org.sdoroshenko.rest.MessageResource.*(..))"/>
             <aop:around method="trace" pointcut-ref="pointCutTrace"/>
         </aop:aspect>
     </aop:config>

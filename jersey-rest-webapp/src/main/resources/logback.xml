@@ -21,9 +21,9 @@
         </encoder>
     </appender>
 
-<!--    <logger name="org.sergei.rest.TraceRestAspect" level="INFO"/>-->
+<!--    <logger name="org.sdoroshenko.rest.TraceRestAspect" level="INFO"/>-->
 
-    <logger name="org.sergei.rest.TraceRestAspect" level="INFO">
+    <logger name="org.sdoroshenko.rest.TraceRestAspect" level="INFO">
         <appender-ref ref="FILE"/>
     </logger>
 

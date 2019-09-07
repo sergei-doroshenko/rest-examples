@@ -11,12 +11,12 @@
         <!-- package -->
         <!--<init-param>
             <param-name>jersey.config.server.provider.packages</param-name>
-            <param-value>org.sergei.rest</param-value>
+            <param-value>org.sdoroshenko.rest</param-value>
         </init-param>-->
         <!-- custom application -->
         <init-param>
             <param-name>javax.ws.rs.Application</param-name>
-            <param-value>org.sergei.rest.application.RestApplication</param-value>
+            <param-value>org.sdoroshenko.rest.application.RestApplication</param-value>
         </init-param>
         <!--<init-param>
             <param-name>jersey.config.server.provider.packages</param-name>
@@ -56,7 +56,7 @@
     <!-- CORS Filter -->
     <filter>
         <filter-name>ApiOriginFilter</filter-name>
-        <filter-class>org.sergei.rest.swagger.ApiOriginFilter</filter-class>
+        <filter-class>org.sdoroshenko.rest.swagger.ApiOriginFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>ApiOriginFilter</filter-name>
