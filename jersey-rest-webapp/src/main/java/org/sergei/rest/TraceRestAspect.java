@@ -2,6 +2,8 @@ package org.sergei.rest;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.sergei.model.Message;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -12,8 +14,11 @@ import java.util.List;
 @Component
 public class TraceRestAspect {
 
-    public Object trace(ProceedingJoinPoint joinpoint) throws Throwable {
-        Object result = joinpoint.proceed();
+    private static final Logger logger = LoggerFactory.getLogger(TraceRestAspect.class);
+
+    public Object trace(ProceedingJoinPoint joinPoint) throws Throwable {
+        logger.info("============================> Tracing aspect <============================");
+        Object result = joinPoint.proceed();
         try {
             List<Message> messages = (List<Message>) result;
             if (!messages.isEmpty()) {
@@ -22,7 +27,7 @@ public class TraceRestAspect {
             }
             return messages;
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Error messages tracing", e);
         }
         return result;
     }
