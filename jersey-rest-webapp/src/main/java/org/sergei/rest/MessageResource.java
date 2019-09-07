@@ -7,13 +7,12 @@ import io.swagger.annotations.ApiResponses;
 import org.sergei.model.Message;
 import org.sergei.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-
 import java.util.List;
 
 import static org.sergei.rest.RestConstants.INCORRECT_PARAMS;
@@ -25,6 +24,7 @@ import static org.sergei.rest.RestConstants.SUCCESSFUL_REQUEST;
  * http://localhost:8081/webapi/messages
  */
 @Path("messages")
+@Component
 @Api(value = "Message Resource")
 public class MessageResource {
 
@@ -45,7 +45,7 @@ public class MessageResource {
         @ApiResponse(code = 500, message = INTERNAL_SERVER_ERROR)
     })
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Message> getMessage() {
+    public List<Message> getMessages() {
         List<Message> messages = messageService.getAllMessages();
         return messages;
     }
