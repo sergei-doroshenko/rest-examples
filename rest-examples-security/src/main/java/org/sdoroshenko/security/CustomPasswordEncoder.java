@@ -1,4 +1,4 @@
-package org.sdoroshenko.service;
+package org.sdoroshenko.security;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
