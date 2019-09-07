@@ -1,6 +1,7 @@
 package org.sergei.rest;
 
 import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.Signature;
 import org.sergei.model.Message;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,7 +18,9 @@ public class TraceRestAspect {
     private static final Logger logger = LoggerFactory.getLogger(TraceRestAspect.class);
 
     public Object trace(ProceedingJoinPoint joinPoint) throws Throwable {
-        logger.info("============================> Tracing aspect <============================");
+        Signature signature = joinPoint.getSignature();
+        String name = signature.getName();
+        logger.info("Tracing [MessageResource.{}]", name);
         Object result = joinPoint.proceed();
         try {
             List<Message> messages = (List<Message>) result;

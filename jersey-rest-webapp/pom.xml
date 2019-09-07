@@ -37,10 +37,10 @@
             <groupId>org.glassfish.jersey.containers</groupId>
             <artifactId>jersey-container-servlet-core</artifactId>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.glassfish.jersey.inject</groupId>
             <artifactId>jersey-hk2</artifactId>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.glassfish.jersey.ext</groupId>
             <artifactId>jersey-spring4</artifactId>
@@ -58,7 +58,7 @@
             <artifactId>aspectjweaver</artifactId>
         </dependency>
 
-
+        <!-- Swagger -->
         <dependency>
             <groupId>io.swagger</groupId>
             <artifactId>swagger-jersey2-jaxrs</artifactId>
@@ -70,6 +70,7 @@
             <artifactId>swagger-ui-new</artifactId>
             <version>${project.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.sergei</groupId>
             <artifactId>services</artifactId>
