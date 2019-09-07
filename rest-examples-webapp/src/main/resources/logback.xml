@@ -23,7 +23,7 @@
 
 <!--    <logger name="org.sdoroshenko.rest.TraceRestAspect" level="INFO"/>-->
 
-    <logger name="org.sdoroshenko.rest.TraceRestAspect" level="INFO">
+    <logger name="org.sdoroshenko.rest" level="INFO">
         <appender-ref ref="FILE"/>
     </logger>
 
